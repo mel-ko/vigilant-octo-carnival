@@ -51,8 +51,8 @@ temp <- ggplot(pipes,
   geom_segment(aes(color = group),
                linewidth = 2) +
   scale_color_gradient(low = "yellow", high = "red", na.value = NA) +
-  coord_cartesian(xlim = c(min(pipes$x, na.rm = T)-0.5, 
-                           max(pipes$x_end, na.rm = T)+0.5),
+  coord_cartesian(xlim = c(min(pipes$x, na.rm = T)-2.5, 
+                           max(pipes$x_end, na.rm = T)+2.5),
                   ylim = c(min(pipes$y, na.rm = T)-0.5,
                            max(pipes$y_end, na.rm = T)+0.5))
 
