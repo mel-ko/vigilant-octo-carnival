@@ -45,14 +45,14 @@ temp <- ggplot(pipes,
                  yend = y_end
                )) +
   theme_void() +
-  theme(plot.background = element_rect(fill = "black"),
+  theme(plot.background = element_rect(fill = "gray10"),
         plot.margin = margin(20, 20, 20, 20),
         legend.position = "none") +
   geom_segment(aes(color = group),
                linewidth = 2) +
-  scale_color_gradient(low = "yellow", high = "red", na.value = NA) +
-  coord_cartesian(xlim = c(min(pipes$x, na.rm = T)-5, 
-                           max(pipes$x_end, na.rm = T)+5),
+  scale_color_gradient(low = "yellow", high = "black", na.value = NA) +
+  coord_cartesian(xlim = c(min(pipes$x, na.rm = T)-2.5, 
+                           max(pipes$x_end, na.rm = T)+2.5),
                   ylim = c(min(pipes$y, na.rm = T)-0.5,
                            max(pipes$y_end, na.rm = T)+0.5))
 
