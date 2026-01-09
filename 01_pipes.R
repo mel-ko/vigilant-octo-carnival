@@ -1,6 +1,7 @@
 library(tidyverse)
 library(gganimate)
 library(RColorBrewer)
+set.seed(42)
 
 n <- round(16, 0)
 
