@@ -3,7 +3,7 @@ library(gganimate)
 library(RColorBrewer)
 set.seed(42)
 
-n <- round(16, 0)
+n <- round(10, 0)
 
 pipes <- expand.grid(
   x = NA,
@@ -39,13 +39,13 @@ temp <- ggplot(pipes,
                )) +
   theme_void() +
   theme(#plot.background = element_rect(fill = "white"),
-        plot.margin = margin(20, 20, 20, 20),
+        plot.margin = margin(0, 0, 0, 0),
         legend.position = "none") +
   geom_segment(aes(color = group),
                linewidth = 2) +
-  scale_color_gradient(low = "#00aeef", high = "#00aeef", na.value = NA) +
-  coord_cartesian(xlim = c(min(pipes$x, na.rm = TRUE) - 5,
-                           max(pipes$x_end, na.rm = TRUE) + 5),
+  scale_color_gradient(low = "white", high = "#00aeef", na.value = NA) +
+  coord_cartesian(xlim = c(min(pipes$x, na.rm = TRUE) - 0.5,
+                           max(pipes$x_end, na.rm = TRUE) + 0.5),
                   ylim = c(min(pipes$y, na.rm = TRUE) - 0.5,
                            max(pipes$y_end, na.rm = TRUE) + 0.5))
 
