@@ -38,17 +38,17 @@ temp <- ggplot(pipes,
                  yend = y_end
                )) +
   theme_void() +
-  theme(plot.background = element_rect(fill = "black"),
+  theme(#plot.background = element_rect(fill = "white"),
         plot.margin = margin(20, 20, 20, 20),
         legend.position = "none") +
   geom_segment(aes(color = group),
                linewidth = 2) +
-  scale_color_gradient(low = "yellow", high = "red", na.value = NA) +
+  scale_color_gradient(low = "#00aeef", high = "#00aeef", na.value = NA) +
   coord_cartesian(xlim = c(min(pipes$x, na.rm = TRUE) - 5,
                            max(pipes$x_end, na.rm = TRUE) + 5),
                   ylim = c(min(pipes$y, na.rm = TRUE) - 0.5,
                            max(pipes$y_end, na.rm = TRUE) + 0.5))
 
 ggsave(temp, filename = "temp.png",
-       width = 1920, height = 1280,
+       width = 2000, height = 500,
        units = "px", dpi = 300)
